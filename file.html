@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen - Software Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        header {
+            margin-bottom: 80px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            margin-top: 80px;
+            color: #1a1a1a;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c2c2c;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        nav {
+            margin-top: 30px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin-right: 30px;
+            font-size: 0.95rem;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 2px;
+        }
+
+        nav a:hover {
+            border-bottom: 2px solid #333;
+        }
+
+        .project {
+            margin-bottom: 60px;
+        }
+
+        .project-meta {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: #f5f5f5;
+            padding: 6px 14px;
+            border-radius: 3px;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            margin-top: 30px;
+        }
+
+        .skill-category h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            margin-bottom: 8px;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .cv-section {
+            margin-bottom: 40px;
+        }
+
+        .cv-item {
+            margin-bottom: 30px;
+        }
+
+        .cv-item h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c2c2c;
+        }
+
+        .cv-date {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .cv-item ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .cv-item li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        a {
+            color: #0066cc;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            nav a {
+                margin-right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header id="home">
+            <h1>Alex Chen</h1>
+            <p class="subtitle">Software Engineer</p>
+            <p>Building scalable backend systems and data infrastructure. 5+ years of experience in distributed systems, cloud architecture, and API design.</p>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#professional">Professional Projects</a>
+                <a href="#side">Side Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#cv">CV</a>
+            </nav>
+        </header>
+
+        <section id="professional">
+            <h2>Professional Projects</h2>
+
+            <div class="project">
+                <h3>Real-Time Analytics Pipeline</h3>
+                <p class="project-meta">TechCorp Inc. • 2023-2024</p>
+                <p>Designed and implemented a distributed data processing pipeline handling 50M+ events per day. Reduced data latency from 2 hours to under 5 minutes, enabling real-time business intelligence dashboards.</p>
+                <p><strong>Key achievements:</strong></p>
+                <ul>
+                    <li>Built event streaming architecture using Apache Kafka with custom partitioning strategy</li>
+                    <li>Implemented fault-tolerant processing with Apache Flink and state management</li>
+                    <li>Reduced infrastructure costs by 40% through optimization and auto-scaling</li>
+                    <li>Created monitoring and alerting system with Prometheus and Grafana</li>
+                </ul>
+                <div class="tech-stack">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">Apache Kafka</span>
+                    <span class="tech-tag">Apache Flink</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Kubernetes</span>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Microservices API Gateway</h3>
+                <p class="project-meta">FinanceApp Ltd. • 2022-2023</p>
+                <p>Led development of centralized API gateway serving 20+ microservices with authentication, rate limiting, and request routing. Handled 10K+ requests per second at peak load.</p>
+                <p><strong>Key achievements:</strong></p>
+                <ul>
+                    <li>Implemented OAuth 2.0 and JWT-based authentication system</li>
+                    <li>Built custom rate limiting with Redis to prevent API abuse</li>
+                    <li>Created comprehensive API documentation using OpenAPI specification</li>
+                    <li>Achieved 99.95% uptime over 12-month period</li>
+                </ul>
+                <div class="tech-stack">
+                    <span class="tech-tag">Go</span>
+                    <span class="tech-tag">Redis</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">gRPC</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Nginx</span>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Database Migration & Optimization</h3>
+                <p class="project-meta">DataSystems Corp. • 2021-2022</p>
+                <p>Migrated legacy monolithic database to microservices architecture with separate databases per service. Improved query performance by 10x and enabled independent service scaling.</p>
+                <p><strong>Key achievements:</strong></p>
+                <ul>
+                    <li>Performed zero-downtime migration using dual-write pattern</li>
+                    <li>Optimized slow queries reducing average response time from 800ms to 80ms</li>
+                    <li>Implemented database replication and automated backups</li>
+                    <li>Created data migration scripts with validation and rollback capabilities</li>
+                </ul>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">AWS RDS</span>
+                    <span class="tech-tag">Flyway</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="side">
+            <h2>Side Projects</h2>
+
+            <div class="project">
+                <h3>DevOps CLI Tool</h3>
+                <p class="project-meta">Open Source • 2024</p>
+                <p>Command-line tool for automating common DevOps tasks including deployment, log analysis, and infrastructure monitoring. 500+ GitHub stars.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Rust</span>
+                    <span class="tech-tag">CLI</span>
+                    <span class="tech-tag">AWS SDK</span>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>API Performance Benchmark Suite</h3>
+                <p class="project-meta">Open Source • 2023</p>
+                <p>Load testing framework for comparing REST API performance across different languages and frameworks. Generates detailed performance reports with charts.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Locust</span>
+                    <span class="tech-tag">Matplotlib</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <ul>
+                        <li>Java (Advanced)</li>
+                        <li>Python (Advanced)</li>
+                        <li>Go (Proficient)</li>
+                        <li>JavaScript/TypeScript (Proficient)</li>
+                        <li>Rust (Intermediate)</li>
+                        <li>SQL (Advanced)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Backend & Databases</h4>
+                    <ul>
+                        <li>Spring Boot, Django, Express.js</li>
+                        <li>PostgreSQL, MySQL</li>
+                        <li>MongoDB, Redis</li>
+                        <li>Apache Kafka, RabbitMQ</li>
+                        <li>Elasticsearch</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Cloud & DevOps</h4>
+                    <ul>
+                        <li>AWS (EC2, S3, Lambda, RDS, ECS)</li>
+                        <li>Docker & Kubernetes</li>
+                        <li>Terraform, CloudFormation</li>
+                        <li>CI/CD (Jenkins, GitHub Actions)</li>
+                        <li>Monitoring (Prometheus, Grafana, ELK)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Architecture & Practices</h4>
+                    <ul>
+                        <li>Microservices Architecture</li>
+                        <li>RESTful API Design</li>
+                        <li>System Design & Scalability</li>
+                        <li>Test-Driven Development</li>
+                        <li>Agile/Scrum Methodologies</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="cv">
+            <h2>CV</h2>
+
+            <div class="cv-section">
+                <h3>Experience</h3>
+                
+                <div class="cv-item">
+                    <h4>Senior Software Engineer - TechCorp Inc.</h4>
+                    <p class="cv-date">January 2022 - Present</p>
+                    <ul>
+                        <li>Led backend development for real-time analytics platform processing 50M+ events/day</li>
+                        <li>Mentored team of 3 junior engineers, conducted code reviews and technical interviews</li>
+                        <li>Improved system reliability from 99.5% to 99.95% uptime</li>
+                        <li>Collaborated with product and data teams to define technical requirements</li>
+                    </ul>
+                </div>
+
+                <div class="cv-item">
+                    <h4>Software Engineer - FinanceApp Ltd.</h4>
+                    <p class="cv-date">March 2020 - December 2021</p>
+                    <ul>
+                        <li>Developed microservices API gateway handling 10K+ requests per second</li>
+                        <li>Implemented authentication, authorization, and rate limiting features</li>
+                        <li>Reduced API response time by 60% through caching and optimization</li>
+                        <li>Created comprehensive API documentation and client SDKs</li>
+                    </ul>
+                </div>
+
+                <div class="cv-item">
+                    <h4>Junior Software Engineer - DataSystems Corp.</h4>
+                    <p class="cv-date">June 2019 - February 2020</p>
+                    <ul>
+                        <li>Built RESTful APIs for customer data management system</li>
+                        <li>Performed database optimization and migration tasks</li>
+                        <li>Participated in agile development with 2-week sprints</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h3>Education</h3>
+                
+                <div class="cv-item">
+                    <h4>B.S. Computer Science - State University</h4>
+                    <p class="cv-date">2015 - 2019</p>
+                    <p>Focus: Distributed Systems, Algorithms, Database Management</p>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h3>Contact</h3>
+                <p>Email: alex.chen@email.com</p>
+                <p>GitHub: <a href="https://github.com/alexchen">github.com/alexchen</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/alexchen">linkedin.com/in/alexchen</a></p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
