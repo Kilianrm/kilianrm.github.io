@@ -1,0 +1,213 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .section-card {
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            padding: 40px;
+            margin-bottom: 70px;
+            background: #ffffff;
+        }
+
+
+        header {
+            margin-bottom: 80px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            margin-top: 80px;
+            color: #1a1a1a;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c2c2c;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        nav {
+            margin-top: 30px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin-right: 30px;
+            font-size: 0.95rem;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 2px;
+        }
+
+        nav a:hover {
+            border-bottom: 2px solid #333;
+        }
+
+        .project {
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    padding: 30px;
+    margin-bottom: 50px;
+    background: #ffffff;
+}
+.project ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+        .project-meta {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: #f5f5f5;
+            padding: 6px 14px;
+            border-radius: 3px;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            margin-top: 30px;
+        }
+
+        .skill-category {
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    padding: 25px;
+    background: #fafafa;
+}
+
+.skill-category h4 {
+    margin-bottom: 15px;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skill-category li {
+    margin-bottom: 8px;
+}
+
+
+        .cv-section {
+            margin-bottom: 40px;
+        }
+
+        .cv-item {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.cv-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+        .cv-item h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c2c2c;
+        }
+
+        .cv-date {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .cv-item ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .cv-item li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        a {
+            color: #0066cc;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            nav a {
+                margin-right: 20px;
+            }
+        }
