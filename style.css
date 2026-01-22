@@ -353,3 +353,8 @@ body {
     background: #fafafa !important;
     color: #1f1f1f !important;
 }
+
+.cv-section .cv-item::before {
+    display: none;
+}
+
