@@ -1,3 +1,8 @@
+:root {
+    color-scheme: light;
+}
+
+
 /* =====================
    Reset & Base
    ===================== */
@@ -333,63 +338,6 @@ a:hover {
     }
 }
 
-/* =====================
-   Dark Mode (auto)
-   ===================== */
-
-@media (prefers-color-scheme: dark) {
-
-    body {
-        background: #0f1115;
-        color: #e6e6e6;
-    }
-
-    header {
-        border-bottom: 1px solid #2a2a2a;
-    }
-
-    .section-card,
-    .project,
-    .skill-category {
-        background: #16181d;
-        border-color: #2a2a2a;
-    }
-
-    h1, h2, h3, h4 {
-        color: #ffffff;
-    }
-
-    p, li {
-        color: #cfcfcf;
-    }
-
-    nav a {
-        color: #cfcfcf;
-    }
-
-    nav a:hover {
-        border-bottom-color: #ffffff;
-    }
-
-    .tech-tag {
-        background: #23262d;
-        color: #d1d5db;
-    }
-
-    .cv-item::before {
-        background: #ffffff;
-    }
-
-    .cv-button {
-        border-color: #ffffff;
-        color: #ffffff;
-    }
-
-    .cv-button:hover {
-        background: #ffffff;
-        color: #0f1115;
-    }
-}
 nav a,
 nav a:hover {
     text-decoration: none;
