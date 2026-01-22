@@ -342,3 +342,14 @@ nav a,
 nav a:hover {
     text-decoration: none;
 }
+
+html {
+    background: #fafafa !important;
+    color: #1f1f1f !important;
+    color-scheme: light;
+}
+
+body {
+    background: #fafafa !important;
+    color: #1f1f1f !important;
+}
