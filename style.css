@@ -282,13 +282,14 @@ h3 {
    ===================== */
 
 a {
-    color: #2563eb;
+    text-decoration: none;
 }
 
+
 a:hover {
-    color: #1d4ed8;
     text-decoration: underline;
 }
+
 
 /* =====================
    Animations
@@ -388,4 +389,8 @@ a:hover {
         background: #ffffff;
         color: #0f1115;
     }
+}
+nav a,
+nav a:hover {
+    text-decoration: none;
 }
