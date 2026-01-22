@@ -5,107 +5,212 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kilian Roig - Software Engineer</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-<div class="container">
-    <header id="home">
-        <h1>Kilian Roig</h1>
-        <p class="subtitle">Software Engineer</p>
-        <p>
-            Software Engineer with experience in technically demanding environments, working on backend systems,
-            simulation platforms and data-driven software. Focused on clean code, system design and long-term
-            maintainability, currently evolving towards cloud-based development with AWS.
-        </p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="professional-projects.html">Professional Projects</a>
-            <a href="personal-projects.html">Personal Projects</a>
-            <a href="cv.html">CV</a>
-        </nav>
-    </header>
-
-    <section id="professional">
-        <h2>Professional Projects</h2>
-
-        <div class="project">
-            <h3>SKYFUSION – LiDAR Data Processing & Velocity Estimation</h3>
-            <p class="project-meta">Ase Optics Europe • 2025</p>
+<body>
+    <div class="container">
+        <header id="home">
+            <h1>Kilian Roig</h1>
+            <p class="subtitle">Software Engineer</p>
             <p>
-                R&D project focused on processing LiDAR point cloud data and estimating observer velocity
-                in multi-sensor perception systems.
+                Software Engineer with experience in technically demanding environments, working on backend systems,
+                simulation platforms and data-driven software. Focused on clean code, system design and long-term
+                maintainability, currently evolving towards cloud-based development with AWS.
             </p>
-            <ul>
-                <li>Developed a Python application using a vendor-provided LiDAR SDK</li>
-                <li>Implemented multi-axis velocity estimation and validation against GPS data</li>
-                <li>Synchronized LiDAR, GPS and video streams</li>
-                <li>Implemented centralized logging and data recording</li>
-                <li>Containerized the solution using Docker and Docker Compose</li>
-            </ul>
-            <div class="tech-stack">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">LiDAR</span>
-                <span class="tech-tag">Docker</span>
-                <span class="tech-tag">GPS</span>
-            </div>
-        </div>
 
-        <div class="project">
-            <h3>ECOSWIR – Automated Microscopy Inspection System</h3>
-            <p class="project-meta">Ase Optics Europe • 2025</p>
-            <p>
-                Design and implementation of an automated inspection platform for microscopy systems
-                in semiconductor environments.
-            </p>
-            <ul>
-                <li>Designed overall system architecture</li>
-                <li>Built a client-server solution with FastAPI and WebSockets</li>
-                <li>Implemented backend control of optical components and motorized stages</li>
-                <li>Developed automatic focus detection and focus map generation</li>
-                <li>Added automated tests with Pytest and GitLab CI workflows</li>
-            </ul>
-            <div class="tech-stack">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">FastAPI</span>
-                <span class="tech-tag">WebSockets</span>
-                <span class="tech-tag">Docker</span>
-                <span class="tech-tag">Pytest</span>
-            </div>
-        </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="professional-projects.html">Professional Projects</a>
+                <a href="personal-projects.html">Personal Projects</a>
+                <a href="cv.html">CV</a>
+            </nav>
+        </header>
 
-        <div class="project" id="routleo-project">
-            <h3>
-  Routing for safety-critical LEO satellite constellation
-  (<a href="https://www.startical.com/en/" target="_blank" rel="noopener noreferrer">
-    STARTICAL
-  </a> satellite program)
+        <section id="professional">
+            <h2>Professional Projects</h2>
+
+            <div class="project" id="ecoswir-project">
+                <h3>
+  <a href="https://www.asensenova.com/project/ecoswir/" target="_blank" rel="noopener noreferrer">
+    ECOSWIR
+  </a><br>
+  <span class="subtitle">
+    Automated Microscopy Inspection System
+  </span>
 </h3>
 
-            <p><strong>Context:</strong> R&D project within the STARTICAL framework focused on the design, implementation, and validation of a custom routing solution for Low Earth Orbit (LEO) satellite networks. The project addressed challenges such as dynamic topology, performance optimization, and network resilience.</p>
 
-            <p><strong>My contribution:</strong> Software engineer responsible for the implementation and evolution of major components of a custom routing solution for safety-critical LEO satellite networks. I contributed across the full development lifecycle, with a focus on performance optimization, network resilience, and system-level validation.</p>
+                <p>
+                    <strong>Context:</strong>
+                    ECOSWIR is a collaborative R&D project focused on developing key semiconductor components for SWIR-based 3D imaging. The project targets high-power nanosecond pulsed diode lasers, quantum-dot detector arrays, and dedicated optics, while scaling the manufacturing of these components and enabling AI-assisted online inspection systems.
+                </p>
 
-           <p><strong>Key technical work:</strong></p>
-<ul>
-    <li>Implemented the first prototype of the Planner module.</li>
-    <li>Integrated external hardware into Mininet-based simulation environments.</li>
-    <li>Improved fast reroute mechanisms.</li>
-    <li>Developed a simulator output converter for integration with UPC simulation tools.</li>
-    <li>Implemented an Analyzer module to extract and process system statistics</li>
-    <li>Reimplemented the solution in C with the goal of optimizing system performance.</li>
-    <li>Automated test result extraction and analysis workflows</li>
-    <li>Independently planned and executed full test campaigns.</li>
-</ul>
+                <p>
+                    <strong>My contribution:</strong>
+                    Designed and implemented the software architecture for an automated microscopy inspection platform. Developed a client–server solution with a web-based user interface and a FastAPI backend, integrating control of optical components and motorized stages, and ensuring reproducible, production-ready deployments.
+                </p>
 
-            <div class="tech-stack">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">C</span>
-                <span class="tech-tag">Bash</span>
+                <p><strong>Key technical work:</strong></p>
+
+                <ul>
+                    <li>Designed the system architecture for an automated microscopy inspection platform.</li>
+                    <li>Developed a client–server application using a web UI and a FastAPI backend with WebSocket communication.</li>
+                    <li>Implemented backend control logic for optical components and motorized stages using the Zaber SDK.</li>
+                    <li>Developed automatic focus detection and focus map generation across samples.</li>
+                    <li>Containerized the system with scripted setup for reproducible deployments.</li>
+                    <li>Implemented multi-level logging, automated testing with Pytest, and GitLab-based version control workflows.</li>
+                </ul>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">WebSocket</span>
+                    <span class="tech-tag">SDKs</span>
+                </div>
             </div>
-            </div>
-    </section>
-    <section id="side">
-</section>
 
+            
+
+            <div class="project" id="skyfusion-project">
+                <h3>
+  <a href="https://www.asensenova.com/project/skyfusion/" target="_blank" rel="noopener noreferrer">
+    SKYFUSION
+  </a><br>
+  <span class="subtitle">
+    Autonomous navigation for drones, beyond GNSS
+  </span>
+</h3>
+
+
+                <p>
+                    <strong>Context:</strong>
+                    Skyfusion is an R&D project focused on GNSS-independent autonomous drone navigation. By fusing LiDAR, radar, and computer vision data, the system enables safe and efficient flight in complex environments and under challenging visibility conditions.
+                </p>
+
+                <p>
+                    <strong>My contribution:</strong>
+                    Developed a Python-based software pipeline for LiDAR point cloud processing and observer velocity estimation. Integrated and synchronized LiDAR, GPS, and video data, validated results against GNSS measurements, and built a containerized, reproducible system with centralized logging and data recording.
+                </p>
+
+                <p><strong>Key technical work:</strong></p>
+
+                <ul>
+                    <li>Processed LiDAR point cloud data using a vendor-provided SDK in Python.</li>
+                    <li>Implemented multi-axis observer velocity estimation algorithms.</li>
+                    <li>Validated velocity estimates against GNSS/GPS ground truth.</li>
+                    <li>Integrated and synchronized heterogeneous sensor data (LiDAR, GPS, video).</li>
+                    <li>Designed centralized, level-based logging and data recording mechanisms to ensure traceability.</li>
+                    <li>Containerized the full pipeline using Docker and Docker Compose for reproducible deployments.</li>
+                </ul>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">C</span>
+                    <span class="tech-tag">SDKs</span>
+                    <span class="tech-tag">Linux Device Integration</span>
+                </div>
+            </div>
+
+            <div class="project" id="echoes-project">
+                <h3>
+                    <a href="https://www.indragroup.com/es/proyectos-innovacion/echoes-extended-communications-vhf-enhanced-satellite-segment" target="_blank" rel="noopener noreferrer">
+                        ECHOES
+                    </a><br>
+                    <span class="subtitle">
+                        Extended Communications in vHf Over Enhanced Satellite segment
+                    </span>
+                </h3>
+
+
+
+                <p>
+                    <strong>Context:</strong>
+                    ECHOES is a space project focused on the development, manufacturing, and launch of two Low Earth Orbit (LEO) satellites. The mission is designed to validate communication and surveillance technologies aimed at supporting aeronautical services.
+
+The project includes the execution of several operational use cases over the South Atlantic.
+                </p>
+
+                <p>
+                    <strong>My contribution:</strong>
+                    As a Software Engineer, I contributed to the development of a C++/Qt-based aeronautical voice communication system within the STARTICAL framework. My work focused on core system components supporting satellite-based voice communications between air traffic controllers and aircraft, ensuring robustness, reliability, and correct system behavior in operational scenarios.
+
+I collaborated closely with multidisciplinary teams to deliver production-quality features and to maintain system stability throughout the project lifecycle.
+                </p>
+
+                <p><strong>Key technical work:</strong></p>
+
+                <ul>
+                    <li>Development and maintenance of C++ / Qt software for mission-critical aeronautical communication systems</li>
+                    <li>Implementation and evolution of core ATMiC components responsible for call control and system supervision</li>
+                    <li>System-level debugging and root cause analysis in complex, distributed environments</li>
+                    <li>Design and execution of simulation-based test campaigns for feature validation</li>
+                    <li>Contribution to software reliability in satellite-based voice communication workflows</li>
+                </ul>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">Qt</span>
+                    <span class="tech-tag">Radio VHF/UHF</span>
+                    <span class="tech-tag">Real-time Communication Systems</span>
+                    <span class="tech-tag">Client–server Architectures</span>
+
+                </div>
+            </div>
+
+            <div class="project" id="routleo-project">
+                <h3>
+  <a href="https://www.startical.com/en/" target="_blank" rel="noopener noreferrer">
+    STARTICAL
+  </a><br>
+  <span class="subtitle">
+    Routing for safety-critical LEO satellite constellation
+  </span>
+</h3>
+
+
+                <p>
+                    <strong>Context:</strong>
+                    R&D project within the STARTICAL framework focused on the design, implementation, and validation
+                    of a custom routing solution for Low Earth Orbit (LEO) satellite networks. The project addressed
+                    challenges such as dynamic topology, performance optimization, and network resilience.
+                </p>
+
+                <p>
+                    <strong>My contribution:</strong>
+                    Software engineer responsible for the implementation and evolution of major components of a
+                    custom routing solution for safety-critical LEO satellite networks. I contributed across the
+                    full development lifecycle, with a focus on performance optimization, network resilience, and
+                    system-level validation.
+                </p>
+
+                <p><strong>Key technical work:</strong></p>
+
+                <ul>
+                    <li>Implemented the first prototype of the Planner module</li>
+                    <li>Integrated external hardware into Mininet-based simulation environments</li>
+                    <li>Improved fast reroute mechanisms</li>
+                    <li>Developed a simulator output converter for integration with UPC simulation tools</li>
+                    <li>Implemented an Analyzer module to extract and process system statistics</li>
+                    <li>Reimplemented the solution in C with the goal of optimizing system performance</li>
+                    <li>Automated test result extraction and analysis workflows</li>
+                    <li>Independently planned and executed full test campaigns</li>
+                </ul>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">C</span>
+                    <span class="tech-tag">Bash</span>
+                    <span class="tech-tag">Graph Theory</span>
+                    <span class="tech-tag">Network Routing Principles</span>
+                    <span class="tech-tag">MPLS Fundamentals</span>
+                    <span class="tech-tag">Packet-level Network Analysis </span>
+                    <span class="tech-tag">Network Traffic Analysis</span>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="side"></section>
+    </div>
 </body>
 </html>
