@@ -42,17 +42,59 @@
     </header>
 
     
-    <div class="project">
-        <h3>Soon</h3>
-        <p class="project-meta">Personal • In progress</p>
-        <p>
-            This section will include personal and experimental projects focused on backend systems,
-            cloud infrastructure, and software architecture.
-        </p>
-        <div class="tech-stack">
-            <span class="tech-tag">Soon</span>
-        </div>
-    </div>
+    <div class="project" id="event-project">
+  <h3>
+    <a href="https://github.com/Kilianrm/cloud-events-platform" target="_blank" rel="noopener noreferrer">
+      EVENT PLATFORM SERVICE
+    </a><br>
+    <span class="subtitle">
+      Serverless Cloud-Native Event Ingestion Platform (AWS)
+    </span>
+  </h3>
+
+  <p>
+    Cloud-native event platform built on AWS to simulate an internal event ingestion and retrieval system.
+    It is designed around a serverless, event-driven architecture where events are ingested via API Gateway, processed asynchronously, and persisted for later retrieval.
+    The system emphasizes scalability, reliability, and clean architectural boundaries, applying real-world cloud design practices.
+  </p>
+
+  <p>
+    The architecture is built using AWS Lambda, API Gateway, DynamoDB, and SQS to enable fully decoupled asynchronous processing.
+    It includes DLQ-based fault tolerance, JWT-based authentication for secure access, and CloudWatch observability for monitoring and tracing event flows.
+    The system is designed to handle failures gracefully while maintaining data consistency and traceability across the pipeline.
+  </p>
+
+  <p>
+    Infrastructure is fully provisioned using Terraform, ensuring reproducible and consistent deployments across environments.
+    The project also includes unit, integration, and end-to-end testing to validate both application logic and infrastructure behavior.
+  </p>
+
+  <p><strong>Key technical work:</strong></p>
+
+  <ul>
+    <li>Designed and implemented a serverless event-driven architecture using AWS Lambda, API Gateway, DynamoDB, and SQS.</li>
+    <li>Implemented asynchronous event processing with queue-based decoupling and DLQ-based fault tolerance.</li>
+    <li>Developed JWT-based authentication using Lambda authorizers to secure API endpoints.</li>
+    <li>Provisioned infrastructure using Terraform following Infrastructure as Code best practices.</li>
+    <li>Implemented observability and monitoring using AWS CloudWatch (logs and metrics).</li>
+    <li>Developed Python-based Lambda functions for event ingestion, validation, and processing pipelines.</li>
+    <li>Built unit, integration, and end-to-end tests for backend and infrastructure validation.</li>
+  </ul>
+
+  <div class="tech-stack">
+    <span class="tech-tag">AWS Lambda</span>
+    <span class="tech-tag">API Gateway</span>
+    <span class="tech-tag">DynamoDB</span>
+    <span class="tech-tag">SQS</span>
+    <span class="tech-tag">DLQ</span>
+    <span class="tech-tag">Terraform</span>
+    <span class="tech-tag">Python</span>
+    <span class="tech-tag">JWT</span>
+    <span class="tech-tag">CloudWatch</span>
+    <span class="tech-tag">Serverless</span>
+  </div>
+</div>
+</section>
 </section>
 
 
