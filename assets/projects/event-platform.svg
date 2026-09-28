@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#d5deef"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-muted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#e11d48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <g id="lambda">
+      <rect x="-24" y="-24" width="48" height="48" rx="10" fill="#dbe6fd" stroke="#2563eb"/>
+      <path d="M-10 -14 H-6 L12 14 M2 -1 L-10 14" stroke="#1e293b" stroke-width="2.5"/>
+    </g>
+  </defs>
+
+  <rect width="800" height="300" fill="#f5f8ff"/>
+  <rect width="800" height="300" fill="url(#grid)"/>
+
+  <g fill="none" stroke="#1e293b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Cloud boundary (infrastructure as code) -->
+    <rect x="180" y="36" width="596" height="248" rx="16" fill="#ffffff" fill-opacity="0.55" stroke="#93b4f5" stroke-width="1.5" stroke-dasharray="6 6"/>
+    <path d="M200 72 a9 9 0 0 1 3 -17 a12 12 0 0 1 22 -3 a9 9 0 0 1 7 20 Z" fill="#ffffff" stroke="#93b4f5"/>
+
+    <!-- Monitoring -->
+    <g stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="2 5">
+      <path d="M420 92 L328 114"/>
+      <path d="M440 92 V116"/>
+      <path d="M460 92 L552 114"/>
+    </g>
+    <rect x="400" y="50" width="80" height="42" rx="6" fill="#ffffff"/>
+    <path d="M410 82 H470" stroke="#cbd5e1" stroke-width="1.5"/>
+    <path d="M412 78 L424 70 L434 74 L446 60 L456 66 L468 58" stroke="#2563eb"/>
+
+    <!-- Client -->
+    <rect x="36" y="112" width="84" height="62" rx="6" fill="#ffffff"/>
+    <path d="M36 124 H120"/>
+    <circle cx="45" cy="118" r="1.8" fill="#1e293b" stroke="none"/>
+    <circle cx="52" cy="118" r="1.8" fill="#1e293b" stroke="none"/>
+    <rect x="46" y="133" width="44" height="6" rx="3" fill="#dbe6fd" stroke="none"/>
+    <rect x="46" y="145" width="62" height="6" rx="3" fill="#dbe6fd" stroke="none"/>
+    <rect x="46" y="157" width="34" height="6" rx="3" fill="#2563eb" stroke="none"/>
+
+    <!-- Client <-> gateway with JWT -->
+    <path d="M124 143 H198" stroke="#2563eb" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <circle cx="146" cy="122" r="6" fill="#ffffff" stroke="#2563eb"/>
+    <path d="M152 122 H172 M166 122 V128 M171 122 V127" stroke="#2563eb"/>
+
+    <!-- API Gateway -->
+    <rect x="204" y="104" width="52" height="76" rx="8" fill="#ffffff"/>
+    <path d="M218 118 V166 M230 118 V166 M242 118 V166" stroke="#94a3b8"/>
+    <path d="M254 94 L266 99 V108 C266 115 261 119 254 122 C247 119 242 115 242 108 V99 Z" fill="#2563eb" stroke="#2563eb"/>
+    <path d="M249 108 L253 112 L260 104" stroke="#ffffff" stroke-width="2"/>
+
+    <path d="M258 140 H290" stroke="#2563eb" marker-end="url(#arrow)"/>
+
+    <!-- Ingest Lambda -->
+    <use href="#lambda" x="320" y="140"/>
+
+    <path d="M346 140 H374" stroke="#2563eb" marker-end="url(#arrow)"/>
+
+    <!-- SQS queue -->
+    <rect x="380" y="118" width="120" height="44" rx="8" fill="#ffffff"/>
+    <g stroke="none" fill="#2563eb">
+      <rect x="390" y="128" width="20" height="24" rx="3" fill-opacity="0.2"/>
+      <rect x="418" y="128" width="20" height="24" rx="3" fill-opacity="0.4"/>
+      <rect x="446" y="128" width="20" height="24" rx="3" fill-opacity="0.65"/>
+      <rect x="474" y="128" width="20" height="24" rx="3" fill-opacity="0.9"/>
+    </g>
+
+    <path d="M502 140 H530" stroke="#2563eb" marker-end="url(#arrow)"/>
+
+    <!-- Processor Lambda -->
+    <use href="#lambda" x="560" y="140"/>
+
+    <path d="M586 140 H640" stroke="#2563eb" marker-end="url(#arrow)"/>
+
+    <!-- DynamoDB -->
+    <path d="M646 112 V168 A34 10 0 0 0 714 168 V112" fill="#ffffff"/>
+    <path d="M646 131 A34 10 0 0 0 714 131 M646 150 A34 10 0 0 0 714 150" stroke-width="1.5"/>
+    <ellipse cx="680" cy="112" rx="34" ry="10" fill="#dbe6fd"/>
+
+    <!-- Retrieval path -->
+    <path d="M680 182 V256 H230 V186" stroke="#94a3b8" stroke-dasharray="4 6" marker-end="url(#arrow-muted)"/>
+
+    <!-- Dead-letter queue -->
+    <path d="M440 164 V204" stroke="#e11d48" stroke-dasharray="4 5" marker-end="url(#arrow-red)"/>
+    <rect x="404" y="208" width="72" height="32" rx="8" fill="#ffffff" stroke="#e11d48"/>
+    <g stroke="none" fill="#e11d48" fill-opacity="0.3">
+      <rect x="414" y="216" width="16" height="16" rx="3"/>
+      <rect x="436" y="216" width="16" height="16" rx="3"/>
+    </g>
+    <path d="M458 219 L466 229 M466 219 L458 229" stroke="#e11d48" stroke-width="2"/>
+  </g>
+</svg>

@@ -5,109 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- BLOCK dark mode -->
     <meta name="color-scheme" content="light">
+    <meta name="description" content="Software Engineer with experience in technically demanding environments, working on backend systems, simulation platforms and data-driven software.">
     <title>Kilian Roig - Software Engineer</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2318181b'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='13' font-weight='700' fill='white' text-anchor='middle'%3EKR%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-<div class="container">
-    <header id="home">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+    <div class="container">
+        <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">KR</span>
+            Kilian Roig
+        </a>
+        <nav class="site-nav" aria-label="Main">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="professional-projects.html">Professional Projects</a>
+            <a href="personal-projects.html">Personal Projects</a>
+        </nav>
+    </div>
+</header>
+
+<main id="main" class="container">
+    <section class="hero" id="home">
         <h1>Kilian Roig</h1>
-        <p class="subtitle">Software Engineer</p>
-        <p>
+        <p class="hero-role">Software Engineer</p>
+        <p class="hero-bio">
             Software Engineer with experience in technically demanding environments, working on backend systems,
             simulation platforms and data-driven software. Focused on clean code, system design and long-term
             maintainability, currently evolving towards cloud-based development with AWS.
         </p>
         <div class="cta-buttons">
-    <a href="assets/cv-kilian-roig.pdf"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="cv-button">
-        View CV (PDF)
-    </a>
+            <a href="assets/cv-kilian-roig.pdf"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="button button-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                View CV (PDF)
+            </a>
 
-    <a href="https://github.com/Kilianrm"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="cv-button">
-        GitHub
-    </a>
-</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="professional-projects.html">Professional Projects</a>
-            <a href="personal-projects.html">Personal Projects</a>
-        </nav>
-       
-
-    </header>
-
-    <section id="cv">
-
-        <div class="cv-section section-card">
-            <h3>Experience</h3>
-            <div class="cv-item">
-                <h4>Software Development Engineer – Ase Optics Europe</h4>
-                <p class="cv-date">Jun 2025 – Sep 2025</p>
-                <ul>
-                    <li>Worked on R&D software projects focused on perception systems, <a href="professional-projects.html#skyfusion-project">sensor data processing</a>, and <a href="professional-projects.html#ecoswir-project">automated inspection platforms</a>.</li>
-                    <li>Designed and developed backend and data-processing applications in Python for multi-sensor systems.</li>
-                    <li>Contributed to system design and implementation of client–server solutions.</li>
-                    <li>Ensured reproducible deployments through containerization and automation.</li>
-                </ul>
-            </div>
-
-            <div class="cv-item">
-                <h4>Software Engineer – Indra</h4>
-                <p class="cv-date">Sep 2023 – Jun 2025</p>
-                <ul>
-                    <li>Developed and maintained <a href="professional-projects.html#echoes-project">C++/Qt software</a> for an aeronautical communication system.</li>
-                    <li>Investigated and resolved defects across core components, improving system stability.</li>
-                    <li>Implemented new features based on evolving project requirements.</li>
-                    <li>Validated system behavior through simulation-based test campaigns.</li>
-                </ul>
-            </div>
-
-
-            <div class="cv-item">
-                <h4> Junior Software Engineer – Indra</h4>
-                <p class="cv-date">Sep 2021 – Sep 2023</p>
-                <ul>
-                    <li>
-    Contributed to the development of a 
-    <a href="professional-projects.html#routleo-project">custom routing solution</a>, implemented in Python.
-</li>
-
-                    <li>Reimplemented and optimized the same routing solution in C, with a focus on real-world constraints and performance</li>
-                    <li>Python tooling for simulation, analysis, testing and automation</li>
-                    <li>Execution of system-wide test campaigns and technical documentation</li>
-                </ul>
-            </div>
+            <a href="https://github.com/Kilianrm"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="button">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                GitHub
+            </a>
         </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="cv">
+        <h2 class="section-title">Experience</h2>
+
+        <ol class="timeline">
+            <li class="timeline-item">
+                <p class="timeline-date">Jun 2025 – Sep 2025</p>
+                <div class="timeline-body">
+                    <h3>Software Development Engineer – Ase Optics Europe</h3>
+                    <ul class="list">
+                        <li>Worked on R&amp;D software projects focused on perception systems, <a href="professional-projects.html#skyfusion-project">sensor data processing</a>, and <a href="professional-projects.html#ecoswir-project">automated inspection platforms</a>.</li>
+                        <li>Designed and developed backend and data-processing applications in Python for multi-sensor systems.</li>
+                        <li>Contributed to system design and implementation of client–server solutions.</li>
+                        <li>Ensured reproducible deployments through containerization and automation.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="timeline-item">
+                <p class="timeline-date">Sep 2023 – Jun 2025</p>
+                <div class="timeline-body">
+                    <h3>Software Engineer – Indra</h3>
+                    <ul class="list">
+                        <li>Developed and maintained <a href="professional-projects.html#echoes-project">C++/Qt software</a> for an aeronautical communication system.</li>
+                        <li>Investigated and resolved defects across core components, improving system stability.</li>
+                        <li>Implemented new features based on evolving project requirements.</li>
+                        <li>Validated system behavior through simulation-based test campaigns.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="timeline-item">
+                <p class="timeline-date">Sep 2021 – Sep 2023</p>
+                <div class="timeline-body">
+                    <h3>Junior Software Engineer – Indra</h3>
+                    <ul class="list">
+                        <li>Contributed to the development of a <a href="professional-projects.html#routleo-project">custom routing solution</a>, implemented in Python.</li>
+                        <li>Reimplemented and optimized the same routing solution in C, with a focus on real-world constraints and performance</li>
+                        <li>Python tooling for simulation, analysis, testing and automation</li>
+                        <li>Execution of system-wide test campaigns and technical documentation</li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+    </section>
 
     <!-- TRAINING -->
-<div class="cv-section section-card">
-    <h3>Training</h3>
+    <section class="section" id="training">
+        <h2 class="section-title">Training</h2>
 
-    <div class="cv-item">
-        <ul>
+        <ul class="list">
             <li><strong>Operating Systems Fundamentals for Communication Systems</strong> (40 hours) – Indra</li>
             <li><strong>C++ Programming Fundamentals</strong> (40 hours) – Indra</li>
             <li><strong>IP Networking Fundamentals</strong> (40 hours) – Indra</li>
             <li><strong>Docker and Kubernetes Fundamentals</strong> (40 hours) – Indra</li>
         </ul>
-    </div>
-</div>
-
+    </section>
 
     <!-- SKILLS -->
-    <div class="cv-section section-card">
-        <h3>Skills</h3>
+    <section class="section" id="skills">
+        <h2 class="section-title">Skills</h2>
 
         <div class="skills-grid">
             <div class="skill-category">
-                <h4>Languages</h4>
+                <h3>Languages</h3>
                 <ul>
                     <li>C / C++</li>
                     <li>Python</li>
@@ -116,45 +131,55 @@
             </div>
 
             <div class="skill-category">
-                <h4>Backend & Systems</h4>
+                <h3>Backend &amp; Systems</h3>
                 <ul>
                     <li>FastAPI</li>
                     <li>Client–Server Architectures</li>
-                    <li>Simulation & Data Processing</li>
+                    <li>Simulation &amp; Data Processing</li>
                     <li>Linux Systems</li>
                 </ul>
             </div>
 
             <div class="skill-category">
-                <h4>Cloud & DevOps</h4>
+                <h3>Cloud &amp; DevOps</h3>
                 <ul>
-                    <li>AWS (learning & hands-on projects)</li>
-                    <li>Docker & Docker Compose</li>
+                    <li>AWS (learning &amp; hands-on projects)</li>
+                    <li>Docker &amp; Docker Compose</li>
                     <li>CI/CD (GitHub Actions)</li>
                 </ul>
             </div>
 
             <div class="skill-category">
-                <h4>Practices</h4>
+                <h3>Practices</h3>
                 <ul>
-                    <li>Clean Code & Maintainability</li>
+                    <li>Clean Code &amp; Maintainability</li>
                     <li>System Design</li>
-                    <li>Testing & Validation</li>
+                    <li>Testing &amp; Validation</li>
                     <li>Long-term Ownership</li>
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- CONTACT -->
-    <div class="cv-section section-card">
-        <h3>Contact</h3>
-        <p>Email: roigmartinezkilian@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/kilianrm">linkedin.com/in/kilianrm</a></p>
+    <section class="section" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-list">
+            <p class="contact-item">Email: <a href="mailto:roigmartinezkilian@gmail.com">roigmartinezkilian@gmail.com</a></p>
+            <p class="contact-item">LinkedIn: <a href="https://www.linkedin.com/in/kilianrm" target="_blank" rel="noopener noreferrer">linkedin.com/in/kilianrm</a></p>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <span>© Kilian Roig</span>
+        <nav class="footer-links" aria-label="Profiles">
+            <a href="https://github.com/Kilianrm" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/kilianrm" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="assets/cv-kilian-roig.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
+        </nav>
     </div>
-
-    
-</div>
-
+</footer>
 </body>
 </html>

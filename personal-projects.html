@@ -5,99 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- BLOCK dark mode -->
     <meta name="color-scheme" content="light">
-    <title>Kilian Roig - Software Engineer</title>
+    <meta name="description" content="Personal projects of Kilian Roig, Software Engineer.">
+    <title>Personal Projects - Kilian Roig</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2318181b'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='13' font-weight='700' fill='white' text-anchor='middle'%3EKR%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="style.css">
-
 </head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<div class="container">
-    <header id="home">
-        <h1>Kilian Roig</h1>
-        <p class="subtitle">Software Engineer</p>
-        <p>
-            Software Engineer with experience in technically demanding environments, working on backend systems,
-            simulation platforms and data-driven software. Focused on clean code, system design and long-term
-            maintainability, currently evolving towards cloud-based development with AWS.
-        </p>
-        <div class="cta-buttons">
-    <a href="assets/cv-kilian-roig.pdf"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="cv-button">
-        View CV (PDF)
-    </a>
-
-    <a href="https://github.com/Kilianrm"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="cv-button">
-        GitHub
-    </a>
-</div>
-        <nav>
+<header class="site-header">
+    <div class="container">
+        <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">KR</span>
+            Kilian Roig
+        </a>
+        <nav class="site-nav" aria-label="Main">
             <a href="index.html">Home</a>
             <a href="professional-projects.html">Professional Projects</a>
-            <a href="personal-projects.html">Personal Projects</a>
+            <a href="personal-projects.html" aria-current="page">Personal Projects</a>
         </nav>
-    </header>
+    </div>
+</header>
 
-    
-    <div class="project" id="event-project">
-  <h3>
-    <a href="https://github.com/Kilianrm/cloud-events-platform" target="_blank" rel="noopener noreferrer">
-      EVENT PLATFORM SERVICE
-    </a><br>
-    <span class="subtitle">
-      Serverless Cloud-Native Event Ingestion Platform (AWS)
-    </span>
-  </h3>
+<main id="main" class="container">
+    <section id="personal">
+        <div class="page-intro">
+            <h1 class="page-title">Personal Projects</h1>
+        </div>
 
-  <p>
-    Cloud-native event platform built on AWS to simulate an internal event ingestion and retrieval system.
-    It is designed around a serverless, event-driven architecture where events are ingested via API Gateway, processed asynchronously, and persisted for later retrieval.
-    The system emphasizes scalability, reliability, and clean architectural boundaries, applying real-world cloud design practices.
-  </p>
+        <article class="project" id="event-project">
+            <figure class="project-media">
+                <img src="assets/projects/event-platform.svg" width="800" height="300" loading="lazy"
+                     alt="Illustration: a client sends events with a JWT through API Gateway to a Lambda, an SQS queue with a dead-letter queue, a processing Lambda and DynamoDB, monitored by CloudWatch inside a cloud boundary.">
+            </figure>
+            <header class="project-header">
+                <h2 class="project-title">
+                    <a class="external-link" href="https://github.com/Kilianrm/cloud-events-platform" target="_blank" rel="noopener noreferrer">EVENT PLATFORM SERVICE</a>
+                </h2>
+                <p class="project-subtitle">Serverless Cloud-Native Event Ingestion Platform (AWS)</p>
+            </header>
 
-  <p>
-    The architecture is built using AWS Lambda, API Gateway, DynamoDB, and SQS to enable fully decoupled asynchronous processing.
-    It includes DLQ-based fault tolerance, JWT-based authentication for secure access, and CloudWatch observability for monitoring and tracing event flows.
-    The system is designed to handle failures gracefully while maintaining data consistency and traceability across the pipeline.
-  </p>
+            <p>
+                Cloud-native event platform built on AWS to simulate an internal event ingestion and retrieval system.
+                It is designed around a serverless, event-driven architecture where events are ingested via API Gateway, processed asynchronously, and persisted for later retrieval.
+                The system emphasizes scalability, reliability, and clean architectural boundaries, applying real-world cloud design practices.
+            </p>
 
-  <p>
-    Infrastructure is fully provisioned using Terraform, ensuring reproducible and consistent deployments across environments.
-    The project also includes unit, integration, and end-to-end testing to validate both application logic and infrastructure behavior.
-  </p>
+            <p>
+                The architecture is built using AWS Lambda, API Gateway, DynamoDB, and SQS to enable fully decoupled asynchronous processing.
+                It includes DLQ-based fault tolerance, JWT-based authentication for secure access, and CloudWatch observability for monitoring and tracing event flows.
+                The system is designed to handle failures gracefully while maintaining data consistency and traceability across the pipeline.
+            </p>
 
-  <p><strong>Key technical work:</strong></p>
+            <p>
+                Infrastructure is fully provisioned using Terraform, ensuring reproducible and consistent deployments across environments.
+                The project also includes unit, integration, and end-to-end testing to validate both application logic and infrastructure behavior.
+            </p>
 
-  <ul>
-    <li>Designed and implemented a serverless event-driven architecture using AWS Lambda, API Gateway, DynamoDB, and SQS.</li>
-    <li>Implemented asynchronous event processing with queue-based decoupling and DLQ-based fault tolerance.</li>
-    <li>Developed JWT-based authentication using Lambda authorizers to secure API endpoints.</li>
-    <li>Provisioned infrastructure using Terraform following Infrastructure as Code best practices.</li>
-    <li>Implemented observability and monitoring using AWS CloudWatch (logs and metrics).</li>
-    <li>Developed Python-based Lambda functions for event ingestion, validation, and processing pipelines.</li>
-    <li>Built unit, integration, and end-to-end tests for backend and infrastructure validation.</li>
-  </ul>
+            <p class="project-label"><strong>Key technical work:</strong></p>
 
-  <div class="tech-stack">
-    <span class="tech-tag">AWS Lambda</span>
-    <span class="tech-tag">API Gateway</span>
-    <span class="tech-tag">DynamoDB</span>
-    <span class="tech-tag">SQS</span>
-    <span class="tech-tag">DLQ</span>
-    <span class="tech-tag">Terraform</span>
-    <span class="tech-tag">Python</span>
-    <span class="tech-tag">JWT</span>
-    <span class="tech-tag">CloudWatch</span>
-    <span class="tech-tag">Serverless</span>
-  </div>
-</div>
-</section>
-</section>
+            <ul class="list">
+                <li>Designed and implemented a serverless event-driven architecture using AWS Lambda, API Gateway, DynamoDB, and SQS.</li>
+                <li>Implemented asynchronous event processing with queue-based decoupling and DLQ-based fault tolerance.</li>
+                <li>Developed JWT-based authentication using Lambda authorizers to secure API endpoints.</li>
+                <li>Provisioned infrastructure using Terraform following Infrastructure as Code best practices.</li>
+                <li>Implemented observability and monitoring using AWS CloudWatch (logs and metrics).</li>
+                <li>Developed Python-based Lambda functions for event ingestion, validation, and processing pipelines.</li>
+                <li>Built unit, integration, and end-to-end tests for backend and infrastructure validation.</li>
+            </ul>
 
+            <div class="tech-stack">
+                <span class="tech-tag">AWS Lambda</span>
+                <span class="tech-tag">API Gateway</span>
+                <span class="tech-tag">DynamoDB</span>
+                <span class="tech-tag">SQS</span>
+                <span class="tech-tag">DLQ</span>
+                <span class="tech-tag">Terraform</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">JWT</span>
+                <span class="tech-tag">CloudWatch</span>
+                <span class="tech-tag">Serverless</span>
+            </div>
+        </article>
+    </section>
+</main>
 
-</div>
+<footer class="site-footer">
+    <div class="container">
+        <span>© Kilian Roig</span>
+        <nav class="footer-links" aria-label="Profiles">
+            <a href="https://github.com/Kilianrm" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/kilianrm" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="assets/cv-kilian-roig.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
+        </nav>
+    </div>
+</footer>
 </body>
 </html>

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#d5deef"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#1e293b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="300" fill="#f5f8ff"/>
+  <rect width="800" height="300" fill="url(#grid)"/>
+
+  <g fill="none" stroke="#1e293b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Ground -->
+    <rect x="0" y="270" width="800" height="30" fill="#eef2fa" stroke="none"/>
+    <path d="M0 270 H800"/>
+
+    <!-- Buildings -->
+    <rect x="520" y="120" width="80" height="150" fill="#e2e8f0"/>
+    <rect x="610" y="70" width="90" height="200" fill="#e2e8f0"/>
+    <rect x="710" y="150" width="70" height="120" fill="#e2e8f0"/>
+    <path d="M626 90 H684 M626 110 H684 M726 170 H764 M726 190 H764" stroke="#cbd5e1" stroke-width="1.5"/>
+
+    <!-- Blocked GNSS signal -->
+    <g stroke="#94a3b8">
+      <rect x="140" y="42" width="20" height="16" rx="2" fill="#ffffff"/>
+      <rect x="114" y="45" width="24" height="10" rx="1" fill="#ffffff"/>
+      <rect x="162" y="45" width="24" height="10" rx="1" fill="#ffffff"/>
+      <path d="M158 62 L198 82" stroke-dasharray="4 6"/>
+      <path d="M232 99 L272 118" stroke-dasharray="4 6"/>
+    </g>
+    <path d="M207 82 L223 98 M223 82 L207 98" stroke="#e11d48" stroke-width="2.5"/>
+
+    <!-- Flight trajectory -->
+    <path d="M40 200 C 110 188, 170 160, 236 140" stroke="#94a3b8" stroke-dasharray="4 6"/>
+
+    <!-- LiDAR rays -->
+    <g stroke="#2563eb" stroke-width="1.2" stroke-opacity="0.5" stroke-dasharray="2 5">
+      <path d="M302 150 L520 132"/>
+      <path d="M302 150 L520 156"/>
+      <path d="M302 150 L520 180"/>
+      <path d="M302 150 L520 204"/>
+      <path d="M302 150 L520 228"/>
+      <path d="M302 150 L520 252"/>
+      <path d="M302 150 L490 270"/>
+      <path d="M302 150 L430 270"/>
+      <path d="M302 150 L370 270"/>
+      <path d="M302 150 L310 270"/>
+      <path d="M302 150 L250 270"/>
+    </g>
+
+    <!-- Point cloud -->
+    <g fill="#2563eb" stroke="none">
+      <circle cx="520" cy="132" r="2.8"/>
+      <circle cx="520" cy="156" r="2.8"/>
+      <circle cx="520" cy="180" r="2.8"/>
+      <circle cx="520" cy="204" r="2.8"/>
+      <circle cx="520" cy="228" r="2.8"/>
+      <circle cx="520" cy="252" r="2.8"/>
+      <circle cx="520" cy="144" r="2"/>
+      <circle cx="520" cy="168" r="2"/>
+      <circle cx="520" cy="192" r="2"/>
+      <circle cx="520" cy="216" r="2"/>
+      <circle cx="520" cy="240" r="2"/>
+      <circle cx="520" cy="262" r="2"/>
+      <circle cx="530" cy="138" r="1.6" fill-opacity="0.6"/>
+      <circle cx="536" cy="162" r="1.6" fill-opacity="0.6"/>
+      <circle cx="529" cy="186" r="1.6" fill-opacity="0.6"/>
+      <circle cx="540" cy="208" r="1.6" fill-opacity="0.6"/>
+      <circle cx="531" cy="232" r="1.6" fill-opacity="0.6"/>
+      <circle cx="538" cy="256" r="1.6" fill-opacity="0.6"/>
+      <circle cx="490" cy="270" r="2.8"/>
+      <circle cx="430" cy="270" r="2.8"/>
+      <circle cx="370" cy="270" r="2.8"/>
+      <circle cx="310" cy="270" r="2.8"/>
+      <circle cx="250" cy="270" r="2.8"/>
+      <circle cx="460" cy="270" r="2"/>
+      <circle cx="400" cy="270" r="2"/>
+      <circle cx="340" cy="270" r="2"/>
+      <circle cx="280" cy="270" r="2"/>
+    </g>
+
+    <!-- Drone -->
+    <path d="M300 132 L250 116 M300 132 L350 116"/>
+    <path d="M250 116 V108 M350 116 V108"/>
+    <ellipse cx="250" cy="106" rx="26" ry="4" fill="#dbe6fd" stroke="#2563eb"/>
+    <ellipse cx="350" cy="106" rx="26" ry="4" fill="#dbe6fd" stroke="#2563eb"/>
+    <path d="M286 140 L280 154 M314 140 L320 154"/>
+    <rect x="280" y="122" width="40" height="20" rx="6" fill="#ffffff"/>
+    <rect x="294" y="142" width="16" height="8" rx="2" fill="#1e293b"/>
+    <circle cx="322" cy="134" r="4" fill="#ffffff"/>
+
+    <!-- Velocity vector -->
+    <path d="M272 76 H384" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <!-- Axes gizmo -->
+    <path d="M96 246 H140" marker-end="url(#arrow-ink)"/>
+    <path d="M96 246 V204" marker-end="url(#arrow-ink)"/>
+    <path d="M96 246 L68 262" marker-end="url(#arrow-ink)"/>
+    <circle cx="96" cy="246" r="3.5" fill="#2563eb" stroke="none"/>
+  </g>
+</svg>

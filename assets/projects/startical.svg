@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#d5deef"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="300" fill="#f5f8ff"/>
+  <rect width="800" height="300" fill="url(#grid)"/>
+
+  <g fill="none" stroke="#1e293b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Orbital planes -->
+    <ellipse cx="400" cy="160" rx="300" ry="70" stroke="#cbd5e1" stroke-width="1.5"/>
+    <ellipse cx="400" cy="160" rx="190" ry="125" stroke="#cbd5e1" stroke-width="1.5"/>
+
+    <!-- Mesh links -->
+    <g stroke="#94a3b8" stroke-width="1.5">
+      <path d="M700 160 L660 195 L550 221"/>
+      <path d="M700 160 L660 125 L550 99"/>
+      <path d="M100 160 L140 195 L250 221"/>
+      <path d="M100 160 L140 125 L250 99"/>
+      <path d="M590 160 L534 248 L400 285 L266 248 L210 160 L266 72 L400 35 L534 72 Z"/>
+      <path d="M590 160 L700 160 M590 160 L660 125 M590 160 L660 195"/>
+      <path d="M210 160 L100 160 M210 160 L140 125 M210 160 L140 195"/>
+      <path d="M534 248 L550 221 M534 72 L550 99 M266 248 L250 221 M266 72 L250 99"/>
+      <path d="M400 35 L250 99 M400 285 L250 221 M400 285 L550 221"/>
+      <path d="M140 195 L266 248 M534 248 L660 195"/>
+    </g>
+
+    <!-- Earth -->
+    <circle cx="400" cy="160" r="78" fill="#dbe6fd" stroke="#93b4f5"/>
+    <g stroke="#93b4f5" stroke-width="1.5">
+      <ellipse cx="400" cy="160" rx="30" ry="78"/>
+      <ellipse cx="400" cy="160" rx="60" ry="78"/>
+      <path d="M322 160 H478 M330 125 H470 M330 195 H470"/>
+    </g>
+
+    <!-- Primary route -->
+    <path d="M100 160 L140 125 L266 72 L400 35 L534 72" stroke="#2563eb" stroke-width="3.5"/>
+    <path d="M660 125 L700 160" stroke="#2563eb" stroke-width="3.5"/>
+
+    <!-- Failed link -->
+    <path d="M534 72 L660 125" stroke="#e11d48" stroke-width="2" stroke-dasharray="4 6" stroke-opacity="0.7"/>
+    <path d="M589 91 L605 107 M605 91 L589 107" stroke="#e11d48" stroke-width="2.5"/>
+
+    <!-- Fast reroute -->
+    <path d="M534 72 L590 160 L660 125" stroke="#2563eb" stroke-width="3" stroke-dasharray="7 6"/>
+
+    <!-- Satellites -->
+    <g fill="#ffffff">
+      <circle cx="660" cy="195" r="6"/>
+      <circle cx="550" cy="221" r="6"/>
+      <circle cx="250" cy="221" r="6"/>
+      <circle cx="140" cy="195" r="6"/>
+      <circle cx="250" cy="99" r="6"/>
+      <circle cx="550" cy="99" r="6"/>
+      <circle cx="534" cy="248" r="6"/>
+      <circle cx="400" cy="285" r="6"/>
+      <circle cx="266" cy="248" r="6"/>
+      <circle cx="210" cy="160" r="6"/>
+      
+    </g>
+    <g fill="#dbe6fd" stroke="#2563eb">
+      <circle cx="140" cy="125" r="6"/>
+      <circle cx="266" cy="72" r="6"/>
+      <circle cx="400" cy="35" r="6"/>
+      <circle cx="534" cy="72" r="6"/>
+      <circle cx="590" cy="160" r="6"/>
+      <circle cx="660" cy="125" r="6"/>
+    </g>
+
+    <!-- Endpoints -->
+    <circle cx="100" cy="160" r="15" stroke="#2563eb" stroke-width="1.5" stroke-opacity="0.4"/>
+    <circle cx="100" cy="160" r="8" fill="#2563eb" stroke="none"/>
+    <circle cx="700" cy="160" r="15" stroke="#2563eb" stroke-width="1.5" stroke-opacity="0.4"/>
+    <circle cx="700" cy="160" r="8" fill="#2563eb" stroke="none"/>
+  </g>
+</svg>
