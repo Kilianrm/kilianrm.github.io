@@ -289,6 +289,78 @@ main.container {
     letter-spacing: -0.03em;
 }
 
+.page-lead {
+    max-width: 62ch;
+    margin-top: 12px;
+    font-size: 1.075rem;
+    color: var(--text-muted);
+}
+
+/* =====================
+   Product Lab
+   ===================== */
+
+.project-status {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+    padding: 3px 10px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.project-status::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.project-status--live { color: #15803d; border-color: #bbf7d0; background: #f0fdf4; }
+.project-status--validating { color: #a16207; border-color: #fde68a; background: #fefce8; }
+.project-status--profitable { color: var(--accent-strong); border-color: var(--accent-border); background: var(--accent-soft); }
+.project-status--retired { color: var(--text-subtle); background: var(--bg); }
+
+.project-status--soon { color: var(--text-muted); background: var(--surface); }
+
+/* Placeholder cards shown until the first products launch. */
+.lab-soon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+    gap: 24px;
+}
+
+.lab-soon {
+    display: flex;
+    flex-direction: column;
+    min-height: 180px;
+    padding: 24px;
+    border: 1px dashed var(--border-strong);
+    border-radius: var(--radius);
+    background: repeating-linear-gradient(-45deg, transparent 0 10px, rgba(24, 24, 27, 0.025) 10px 20px);
+}
+
+.lab-soon .project-title {
+    font-size: 1.1rem;
+    color: var(--text-subtle);
+}
+
+.lab-soon p {
+    margin-top: auto;
+    padding-top: 20px;
+    font-size: 0.925rem;
+    color: var(--text-subtle);
+}
+
 /* =====================
    Sections
    ===================== */
@@ -835,19 +907,21 @@ html.dialog-open {
         padding-bottom: 10px;
     }
 
+    /* Short labels and wrapping keep every section visible on narrow screens. */
     .site-nav {
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         gap: 2px;
-        max-width: calc(100% + 24px);
         margin-left: -10px;
-        overflow-x: auto;
-        scrollbar-width: none;
     }
 
     .site-nav a {
         padding: 6px 10px;
         font-size: 0.875rem;
         white-space: nowrap;
+    }
+
+    .nav-long {
+        display: none;
     }
 
     main.container {
