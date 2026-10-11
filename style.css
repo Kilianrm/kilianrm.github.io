@@ -446,6 +446,11 @@ main.container {
     margin-top: 10px;
 }
 
+.timeline-body > p {
+    margin-top: 4px;
+    color: var(--text-muted);
+}
+
 /* =====================
    Lists
    ===================== */
@@ -486,12 +491,23 @@ main.container {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px 40px;
+}
+
+.skill-category {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 16px;
+    align-items: baseline;
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+}
+
+.skill-category:first-child {
+    padding-top: 0;
+    border-top: 0;
 }
 
 .skill-category h3 {
-    margin-bottom: 12px;
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--text);
@@ -500,16 +516,16 @@ main.container {
 .skill-category ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
     list-style: none;
 }
 
 .skill-category li {
-    padding: 5px 12px;
+    padding: 3px 10px;
     border: 1px solid var(--border);
     border-radius: 999px;
     background: var(--surface);
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     color: var(--text-muted);
 }
 
@@ -558,6 +574,26 @@ main.container {
     margin: -36px -36px 28px;
     border-bottom: 1px solid var(--border);
     background: #f5f8ff;
+}
+
+.project--featured .project-media {
+    position: relative;
+}
+
+/* Ribbon hanging from the top edge, with a notched tail. */
+.project-featured {
+    position: absolute;
+    top: 0;
+    right: 24px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    width: 28px;
+    height: 40px;
+    padding-top: 9px;
+    background: linear-gradient(180deg, #fbbf24, #f59e0b);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%);
+    color: #ffffff;
 }
 
 .project-media img {
@@ -689,6 +725,12 @@ main.container {
 .project-grid.is-enhanced .project:hover {
     border-color: var(--accent-border);
     box-shadow: 0 10px 30px -14px rgba(37, 99, 235, 0.3);
+}
+
+/* Featured card: gold hover to match its ribbon. */
+.project-grid.is-enhanced .project--featured:hover {
+    border-color: #fcd34d;
+    box-shadow: 0 0 0 1px #fde68a, 0 10px 30px -12px rgba(245, 158, 11, 0.45);
 }
 
 .project-grid.is-enhanced .project > :not(.project-media):not(.project-header):not(.tech-stack):not(.project-open) {
@@ -831,6 +873,19 @@ html.dialog-open {
     box-shadow: none;
 }
 
+/* Keep the ribbon clear of the close button (12px inset + 36px wide). */
+.project-dialog .project-featured {
+    right: 80px;
+    width: 36px;
+    height: 52px;
+    padding-top: 12px;
+}
+
+.project-dialog .project-featured svg {
+    width: 18px;
+    height: 18px;
+}
+
 @keyframes dialogIn {
     from {
         opacity: 0;
@@ -967,7 +1022,11 @@ html.dialog-open {
         top: -18px;
     }
 
-    .skills-grid,
+    .skill-category {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
     .contact-list {
         grid-template-columns: 1fr;
         gap: 24px;

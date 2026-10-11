@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- BLOCK dark mode -->
     <meta name="color-scheme" content="light">
-    <meta name="description" content="Software Engineer with experience in technically demanding environments, working on backend systems, simulation platforms and data-driven software.">
+    <meta name="description" content="Backend Software Engineer building distributed systems in C++ and Python, with hands-on hardware and sensor integration and serverless, event-driven experience on AWS.">
     <title>Kilian Roig - Software Engineer</title>
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Kilian Roig">
     <meta property="og:title" content="Kilian Roig - Software Engineer">
-    <meta property="og:description" content="Software Engineer with experience in technically demanding environments, working on backend systems.">
+    <meta property="og:description" content="Backend Software Engineer building distributed systems in C++ and Python, with hands-on hardware and sensor integration and serverless, event-driven experience on AWS.">
     <meta property="og:url" content="https://kilianrm.github.io/">
     <meta property="og:image" content="https://kilianrm.github.io/assets/og-image.png">
     <meta property="og:image:width" content="1200">
@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -46,9 +46,10 @@
         <h1>Kilian Roig</h1>
         <p class="hero-role">Software Engineer</p>
         <p class="hero-bio">
-            Software Engineer with experience in technically demanding environments, working on backend systems,
-            simulation platforms and data-driven software. Focused on clean code, system design and long-term
-            maintainability, currently evolving towards cloud-based development with AWS.
+            Backend Software Engineer building distributed systems in C++ and Python. Currently at Sopra Steria,
+            developing C++ services for highway infrastructure. Background in aeronautical communication systems,
+            network routing and hardware and sensor integration. On the cloud side, I build serverless, event-driven
+            systems on AWS with Terraform and CI/CD.
         </p>
         <div class="cta-buttons">
             <a href="assets/cv-kilian-roig.pdf"
@@ -74,6 +75,30 @@
         <h2 class="section-title">Experience</h2>
 
         <ol class="timeline">
+            <li class="timeline-item">
+                <p class="timeline-date">May 2026 – Present</p>
+                <div class="timeline-body">
+                    <h3>Software Engineer (C++) – Sopra Steria</h3>
+                    <ul class="list">
+                        <li>Design, develop and maintain C++ backend services that process requests from highway infrastructure components.</li>
+                        <li>Work on distributed systems integration across services and infrastructure components.</li>
+                        <li>Drive performance optimization and debugging of production backend services.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="timeline-item">
+                <p class="timeline-date">Jan 2026 – Apr 2026</p>
+                <div class="timeline-body">
+                    <h3>Independent Project – Cloud Engineering (AWS)</h3>
+                    <ul class="list">
+                        <li>Built a <a href="personal-projects.html#event-project">serverless event-driven platform</a> on AWS using Lambda, API Gateway, SQS and DynamoDB.</li>
+                        <li>Secured the API with JWT Lambda authorizers and added DLQ-based fault tolerance and CloudWatch observability.</li>
+                        <li>Provisioned all infrastructure with Terraform and validated it with unit, integration and end-to-end tests.</li>
+                    </ul>
+                </div>
+            </li>
+
             <li class="timeline-item">
                 <p class="timeline-date">Jun 2025 – Sep 2025</p>
                 <div class="timeline-body">
@@ -115,16 +140,19 @@
         </ol>
     </section>
 
-    <!-- TRAINING -->
-    <section class="section" id="training">
-        <h2 class="section-title">Training</h2>
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+        <h2 class="section-title">Education</h2>
 
-        <ul class="list">
-            <li><strong>Operating Systems Fundamentals for Communication Systems</strong> (40 hours) – Indra</li>
-            <li><strong>C++ Programming Fundamentals</strong> (40 hours) – Indra</li>
-            <li><strong>IP Networking Fundamentals</strong> (40 hours) – Indra</li>
-            <li><strong>Docker and Kubernetes Fundamentals</strong> (40 hours) – Indra</li>
-        </ul>
+        <ol class="timeline">
+            <li class="timeline-item">
+                <p class="timeline-date">Sep 2018 – Jul 2022</p>
+                <div class="timeline-body">
+                    <h3>Bachelor’s Degree in Computer Engineering – Universitat Politècnica de Catalunya</h3>
+                    <p>Information Technology</p>
+                </div>
+            </li>
+        </ol>
     </section>
 
     <!-- SKILLS -->
@@ -135,41 +163,92 @@
             <div class="skill-category">
                 <h3>Languages</h3>
                 <ul>
-                    <li>C / C++</li>
                     <li>Python</li>
+                    <li>Go</li>
+                    <li>C / C++ (Qt)</li>
                     <li>Bash</li>
                 </ul>
             </div>
 
             <div class="skill-category">
-                <h3>Backend &amp; Systems</h3>
+                <h3>Backend &amp; Architecture</h3>
                 <ul>
+                    <li>Microservices</li>
+                    <li>Event-driven Architecture</li>
                     <li>FastAPI</li>
-                    <li>Client–Server Architectures</li>
-                    <li>Simulation &amp; Data Processing</li>
-                    <li>Linux Systems</li>
+                    <li>JWT Authentication</li>
+                    <li>System Design</li>
+                    <li>Distributed Systems Testing</li>
                 </ul>
             </div>
 
             <div class="skill-category">
-                <h3>Cloud &amp; DevOps</h3>
+                <h3>AWS</h3>
                 <ul>
-                    <li>AWS (learning &amp; hands-on projects)</li>
+                    <li>Lambda</li>
+                    <li>API Gateway</li>
+                    <li>SQS</li>
+                    <li>ECS</li>
+                    <li>EKS</li>
+                    <li>CDK</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>DevOps &amp; Infrastructure</h3>
+                <ul>
+                    <li>Kubernetes</li>
                     <li>Docker &amp; Docker Compose</li>
+                    <li>Terraform (IaC)</li>
                     <li>CI/CD (GitHub Actions)</li>
                 </ul>
             </div>
 
             <div class="skill-category">
-                <h3>Practices</h3>
+                <h3>Databases</h3>
                 <ul>
-                    <li>Clean Code &amp; Maintainability</li>
-                    <li>System Design</li>
-                    <li>Testing &amp; Validation</li>
-                    <li>Long-term Ownership</li>
+                    <li>PostgreSQL</li>
+                    <li>MongoDB</li>
+                    <li>DynamoDB</li>
+                    <li>Redis</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Systems &amp; Networking</h3>
+                <ul>
+                    <li>Linux Systems</li>
+                    <li>Real-time Communication Systems</li>
+                    <li>Network Routing</li>
+                    <li>Packet-level Traffic Analysis</li>
                 </ul>
             </div>
         </div>
+    </section>
+
+    <!-- TRAINING -->
+    <section class="section" id="training">
+        <h2 class="section-title">Training</h2>
+
+        <ul class="list">
+            <li><strong>Kubernetes Hands-on Training</strong> (20 hours) – Sopra Steria</li>
+            <li><strong>Microservices: Solution Building Training</strong> (12 hours) – Sopra Steria</li>
+            <li><strong>Operating Systems Fundamentals for Communication Systems</strong> (40 hours) – Indra</li>
+            <li><strong>C++ Programming Fundamentals</strong> (40 hours) – Indra</li>
+            <li><strong>IP Networking Fundamentals</strong> (40 hours) – Indra</li>
+            <li><strong>Docker and Kubernetes Fundamentals</strong> (40 hours) – Indra</li>
+        </ul>
+    </section>
+
+    <!-- LANGUAGES -->
+    <section class="section" id="languages">
+        <h2 class="section-title">Languages</h2>
+
+        <ul class="list">
+            <li><strong>Catalan</strong> – Native or bilingual proficiency</li>
+            <li><strong>Spanish</strong> – Native or bilingual proficiency</li>
+            <li><strong>English</strong> – Professional working proficiency</li>
+        </ul>
     </section>
 
     <!-- CONTACT -->
