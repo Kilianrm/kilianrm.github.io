@@ -50,6 +50,59 @@
 
         <div class="project-grid">
 
+        <article class="project" id="cv-match-project">
+            <figure class="project-media">
+                <img src="assets/projects/cv-match.svg" width="800" height="300" loading="lazy"
+                     alt="Conceptual illustration of a job seeker using CV Match to find relevant opportunities from external job sites.">
+            </figure>
+            <header class="project-header">
+                <h2 class="project-title">
+                    <a class="external-link" href="https://github.com/Kilianrm/cv-match" target="_blank" rel="noopener noreferrer">CV MATCH</a>
+                    <span class="project-status project-status--wip">In progress</span>
+                </h2>
+                <p class="project-subtitle">A SaaS platform matching job seekers with relevant opportunities</p>
+            </header>
+
+            <p>
+                CV Match is a SaaS platform that helps people find jobs suited to their experience and goals.
+                Users create a candidate profile by uploading a CV or entering their details manually.
+                The platform gathers job listings from external platforms and matches those opportunities to each profile.
+                It also offers AI-powered CV tailoring for selected roles and sends notifications when relevant opportunities are found.
+            </p>
+
+            <p>
+                A microservices architecture separates profile management, CV parsing, job collection, matching and notifications.
+                Each capability can evolve and scale independently as demand grows, supporting the scalability and resilience expected of a large SaaS platform.
+            </p>
+
+            <p class="project-label"><strong>Key technical work:</strong></p>
+
+            <ul class="list">
+                <li>Designed service boundaries and asynchronous workflows so independently deployable capabilities can scale according to their workloads.</li>
+                <li>Gateway Service: implemented a FastAPI entry point with JWT verification, session handling and routes for profile, CV and catalog operations.</li>
+                <li>Profile Service: built PostgreSQL-backed profile management for skills, roles, experience, education and certifications, plus CV upload and deletion with S3-compatible storage.</li>
+                <li>CV Parser Service: scaffolded the FastAPI service and wired its local configuration to a dedicated SQS queue, dead-letter queue, CV storage and Profile Service.</li>
+                <li>Job Scraper Service: documented a source-centric ingestion design and normalized job-listing contract for external platforms.</li>
+                <li>Matching Service: designed user- and system-scoped matching flows, ranked results and events for newly discovered matches.</li>
+                <li>Notification Service: designed preference-aware email digests triggered by new matches and scheduled delivery windows.</li>
+                <li>CV Optimizer: captured role-specific, AI-powered CV tailoring as a distinct product capability.</li>
+                <li>Infrastructure as code: authored modular AWS CDK stacks in TypeScript for networking, security, compute, data, authentication, Gateway and Profile services.</li>
+                <li>CI/CD and deployment: automated frontend lint and build checks with GitHub Actions, and created Make/script workflows for local stacks and AWS CDK deployments.</li>
+                <li>Testing: added unit and component tests for Gateway and Profile, parser health checks, and positive/negative cross-service coverage for authentication, profile and CV workflows.</li>
+            </ul>
+
+            <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">LocalStack</span>
+                <span class="tech-tag">AWS CDK</span>
+            </div>
+        </article>
+
         <article class="project" id="event-project">
             <figure class="project-media">
                 <img src="assets/projects/event-platform.svg" width="800" height="300" loading="lazy"
