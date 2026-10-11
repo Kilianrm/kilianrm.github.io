@@ -329,6 +329,7 @@ main.container {
 .project-status--validating { color: #a16207; border-color: #fde68a; background: #fefce8; }
 .project-status--profitable { color: var(--accent-strong); border-color: var(--accent-border); background: var(--accent-soft); }
 .project-status--retired { color: var(--text-subtle); background: var(--bg); }
+.project-status--wip { color: #be123c; border-color: #fecdd3; background: #fff1f2; }
 
 .project-status--soon { color: var(--text-muted); background: var(--surface); }
 
@@ -581,6 +582,19 @@ main.container {
 
 .project-title a {
     color: var(--text);
+}
+
+/* Status pill beside the title, so card titles stay aligned.
+   When the title is too long it wraps flush left below it. */
+.project-title:has(.project-status) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+}
+
+.project-title .project-status {
+    margin: 0;
 }
 
 .project-title a:hover {

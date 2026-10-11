@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -102,6 +102,60 @@
                 <span class="tech-tag">JWT</span>
                 <span class="tech-tag">CloudWatch</span>
                 <span class="tech-tag">Serverless</span>
+            </div>
+        </article>
+
+        <article class="project" id="kube-cost-workspace-project">
+            <figure class="project-media">
+                <img src="assets/projects/kube-cost-workspace.svg" width="800" height="300" loading="lazy"
+                     alt="Illustration: a Kubernetes YAML manifest and a polled cluster with an idle node feed a desktop workspace showing per-node cost, a cost breakdown, a budget forecast and a savings waterfall, which result in a price tag for the workload and a smaller stack of coins once wasted spend is removed.">
+            </figure>
+            <header class="project-header">
+                <h2 class="project-title">
+                    <a class="external-link" href="https://github.com/Kilianrm/kube-cost-workspace" target="_blank" rel="noopener noreferrer">KUBE COST WORKSPACE</a>
+                    <span class="project-status project-status--wip">In progress</span>
+                </h2>
+                <p class="project-subtitle">Kubernetes Cost and Capacity Desktop Workspace (Go)</p>
+            </header>
+
+            <p>
+                Local desktop app for understanding and reducing Kubernetes cost.
+                It estimates what a Deployment manifest will cost before it is deployed, shows what a connected cluster runs and what it bills, and builds a costed plan to cut that bill.
+                It connects with the user's own kubeconfig or AWS CLI session, never stores credentials, and never changes the cluster: every suggested change is a command the user reviews and runs.
+            </p>
+
+            <p>
+                The app is built in Go and packaged as a desktop application with Wails.
+                All cost logic lives in a pure Go core with no Kubernetes, cloud SDK or I/O dependencies, so the desktop app and the kubeestimate CLI share one cost model.
+                Nodes are priced from AWS, Google Cloud and Azure list prices by machine type, region and on-demand or spot purchase option.
+            </p>
+
+            <p>
+                Cluster data comes from the Kubernetes API, metrics-server and the Amazon EKS API.
+                Cost is split into billed, allocated and idle capacity, with budget forecasting and an optimization plan covering rightsizing, node removal, better machine types, spot migration and orphaned volumes.
+                The project includes unit tests across the core and adapters, plus scripted demo clusters on kind and on EKS with eksctl.
+            </p>
+
+            <p class="project-label"><strong>Key technical work:</strong></p>
+
+            <ul class="list">
+                <li>Designed a layered architecture with a pure Go cost core shared by the desktop app and the CLI.</li>
+                <li>Built a manifest converter and cost engine that price Deployments per container and per resource across AWS, GCP and Azure.</li>
+                <li>Implemented a Kubernetes collector with metrics-server usage and direct Amazon EKS connection through the AWS CLI.</li>
+                <li>Modeled billed vs allocated vs idle cost by namespace, workload and node group, with history trends.</li>
+                <li>Built budget forecasting with month-end projection and a breakdown of what changed between periods.</li>
+                <li>Created an optimization planner shown as a savings waterfall, with risk notes, ready-to-run commands and apply/confirm tracking.</li>
+                <li>Simulated manifest rollouts against the live cluster to show whether new nodes are needed and how the bill changes.</li>
+            </ul>
+
+            <div class="tech-stack">
+                <span class="tech-tag">Go</span>
+                <span class="tech-tag">Wails</span>
+                <span class="tech-tag">Kubernetes</span>
+                <span class="tech-tag">client-go</span>
+                <span class="tech-tag">Amazon EKS</span>
+                <span class="tech-tag">AWS SDK</span>
+                <span class="tech-tag">FinOps</span>
             </div>
         </article>
         </div>

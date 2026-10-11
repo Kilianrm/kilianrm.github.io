@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#d5deef"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-muted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="300" fill="#f5f8ff"/>
+  <rect width="800" height="300" fill="url(#grid)"/>
+
+  <g fill="none" stroke="#1e293b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Deployment manifest: estimated on its own, no cluster needed -->
+    <path d="M56 16 H124 L144 36 V100 H56 Z" fill="#ffffff"/>
+    <path d="M124 16 V36 H144"/>
+    <!-- YAML: key, colon, value; nested keys indented; list item with a dash -->
+    <g stroke="none">
+      <!-- apiVersion: apps/v1 -->
+      <rect x="64" y="27" width="22" height="5" rx="2.5" fill="#2563eb"/>
+      <circle cx="89" cy="27.8" r="1.2" fill="#1e293b"/><circle cx="89" cy="31.2" r="1.2" fill="#1e293b"/>
+      <rect x="93" y="27" width="20" height="5" rx="2.5" fill="#dbe6fd"/>
+      <!-- kind: Deployment -->
+      <rect x="64" y="39" width="14" height="5" rx="2.5" fill="#2563eb"/>
+      <circle cx="81" cy="39.8" r="1.2" fill="#1e293b"/><circle cx="81" cy="43.2" r="1.2" fill="#1e293b"/>
+      <rect x="85" y="39" width="30" height="5" rx="2.5" fill="#dbe6fd"/>
+      <!-- spec: -->
+      <rect x="64" y="51" width="18" height="5" rx="2.5" fill="#2563eb"/>
+      <circle cx="85" cy="51.8" r="1.2" fill="#1e293b"/><circle cx="85" cy="55.2" r="1.2" fill="#1e293b"/>
+      <!--   replicas: 3 -->
+      <rect x="73" y="63" width="22" height="5" rx="2.5" fill="#2563eb"/>
+      <circle cx="98" cy="63.8" r="1.2" fill="#1e293b"/><circle cx="98" cy="67.2" r="1.2" fill="#1e293b"/>
+      <rect x="102" y="63" width="8" height="5" rx="2.5" fill="#dbe6fd"/>
+      <!--   containers: -->
+      <rect x="73" y="75" width="28" height="5" rx="2.5" fill="#2563eb"/>
+      <circle cx="104" cy="75.8" r="1.2" fill="#1e293b"/><circle cx="104" cy="79.2" r="1.2" fill="#1e293b"/>
+      <!--   - name: api -->
+      <rect x="82" y="88.3" width="5" height="2.4" rx="1.2" fill="#1e293b"/>
+      <rect x="91" y="87" width="14" height="5" rx="2.5" fill="#2563eb"/>
+      <circle cx="108" cy="87.8" r="1.2" fill="#1e293b"/><circle cx="108" cy="91.2" r="1.2" fill="#1e293b"/>
+      <rect x="112" y="87" width="20" height="5" rx="2.5" fill="#dbe6fd"/>
+    </g>
+    <path d="M150 62 C192 62 198 80 228 80" stroke="#2563eb" marker-end="url(#arrow)"/>
+
+    <!-- Cluster: three nodes, the middle one mostly idle -->
+    <rect x="24" y="120" width="160" height="140" rx="12" fill="#ffffff" fill-opacity="0.55" stroke="#93b4f5" stroke-width="1.5" stroke-dasharray="6 6"/>
+    <rect x="40" y="142" width="128" height="30" rx="6" fill="#ffffff"/>
+    <rect x="40" y="180" width="128" height="30" rx="6" fill="#ffffff" stroke="#e11d48" stroke-dasharray="4 4"/>
+    <rect x="40" y="218" width="128" height="30" rx="6" fill="#ffffff"/>
+    <g stroke="none" fill="#2563eb">
+      <circle cx="58" cy="157" r="6"/><circle cx="78" cy="157" r="6"/><circle cx="98" cy="157" r="6" fill-opacity="0.4"/><circle cx="118" cy="157" r="6"/>
+      <circle cx="58" cy="195" r="6" fill-opacity="0.4"/>
+      <circle cx="58" cy="233" r="6"/><circle cx="78" cy="233" r="6" fill-opacity="0.4"/><circle cx="98" cy="233" r="6"/>
+    </g>
+
+    <!-- Kubernetes wheel badge -->
+    <circle cx="104" cy="120" r="18" fill="#f5f8ff" stroke="none"/>
+    <path d="M104 107 L114.2 111.9 L116.7 122.9 L109.6 131.7 H98.4 L91.3 122.9 L93.8 111.9 Z" fill="#2563eb" stroke="#2563eb"/>
+    <g stroke="#ffffff" stroke-width="1.5">
+      <circle cx="104" cy="120" r="4"/>
+      <path d="M104 116 V111 M107.1 117.5 L111.6 115.4 M107.9 120.9 L112.8 122 M105.7 123.6 L108.9 127.5 M102.3 123.6 L99.1 127.5 M100.1 120.9 L95.2 122 M100.9 117.5 L96.4 115.4"/>
+    </g>
+
+    <!-- Polling loop: the workspace requests, the cluster returns read-only data -->
+    <path d="M226 180 C216 164 200 164 192 176" stroke="#94a3b8" stroke-dasharray="3 4" marker-end="url(#arrow-muted)"/>
+    <path d="M192 200 C200 216 216 216 226 204" stroke="#2563eb" marker-end="url(#arrow)"/>
+
+    <!-- Desktop workspace -->
+    <rect x="236" y="36" width="344" height="228" rx="8" fill="#ffffff"/>
+    <path d="M236 54 H580"/>
+    <circle cx="247" cy="45" r="1.8" fill="#1e293b" stroke="none"/>
+    <circle cx="254" cy="45" r="1.8" fill="#1e293b" stroke="none"/>
+    <path d="M282 54 V264" stroke="#cbd5e1" stroke-width="1.5"/>
+    <g stroke="none">
+      <rect x="246" y="68" width="26" height="6" rx="3" fill="#2563eb"/>
+      <rect x="246" y="84" width="26" height="6" rx="3" fill="#dbe6fd"/>
+      <rect x="246" y="100" width="26" height="6" rx="3" fill="#dbe6fd"/>
+      <rect x="246" y="116" width="26" height="6" rx="3" fill="#dbe6fd"/>
+    </g>
+
+    <!-- Per-node cost: used, allocated, idle -->
+    <g stroke-width="1.5">
+      <rect x="296" y="72" width="140" height="14" rx="3" fill="#ffffff" stroke="#cbd5e1"/>
+      <rect x="296" y="72" width="108" height="14" rx="3" fill="#dbe6fd" stroke="none"/>
+      <rect x="296" y="72" width="84" height="14" rx="3" fill="#2563eb" stroke="none"/>
+      <!-- Simulated rollout: the manifest's pods placed on this node -->
+      <rect x="407" y="72" width="24" height="14" rx="3" fill="#ffffff" stroke="#2563eb" stroke-dasharray="3 3"/>
+
+      <rect x="296" y="96" width="140" height="14" rx="3" fill="#e11d48" fill-opacity="0.08" stroke="#e11d48" stroke-dasharray="4 4"/>
+      <rect x="296" y="96" width="28" height="14" rx="3" fill="#dbe6fd" stroke="none"/>
+      <rect x="296" y="96" width="14" height="14" rx="3" fill="#2563eb" stroke="none"/>
+
+      <rect x="296" y="120" width="140" height="14" rx="3" fill="#ffffff" stroke="#cbd5e1"/>
+      <rect x="296" y="120" width="122" height="14" rx="3" fill="#dbe6fd" stroke="none"/>
+      <rect x="296" y="120" width="98" height="14" rx="3" fill="#2563eb" stroke="none"/>
+    </g>
+
+    <!-- Manifest estimate: cost split per container -->
+    <rect x="448" y="64" width="118" height="76" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <g transform="rotate(-90 482 102)" stroke-width="9" stroke-linecap="butt">
+      <circle cx="482" cy="102" r="20" stroke="#dbe6fd"/>
+      <circle cx="482" cy="102" r="20" stroke="#2563eb" stroke-dasharray="55 70.7"/>
+      <circle cx="482" cy="102" r="20" stroke="#93b4f5" stroke-dasharray="0 57 32 36.7"/>
+    </g>
+    <g stroke="none">
+      <circle cx="518" cy="88" r="3.5" fill="#2563eb"/>
+      <rect x="526" y="85" width="30" height="6" rx="3" fill="#cbd5e1"/>
+      <circle cx="518" cy="102" r="3.5" fill="#93b4f5"/>
+      <rect x="526" y="99" width="22" height="6" rx="3" fill="#cbd5e1"/>
+      <circle cx="518" cy="116" r="3.5" fill="#dbe6fd"/>
+      <rect x="526" y="113" width="16" height="6" rx="3" fill="#cbd5e1"/>
+    </g>
+
+    <!-- Budget forecast: month-end projection crosses the budget -->
+    <rect x="296" y="152" width="130" height="98" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <path d="M306 186 H416" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5 5"/>
+    <path d="M306 236 L326 228 L346 222 L366 212 L382 204" stroke="#2563eb"/>
+    <path d="M382 204 L414 176" stroke="#2563eb" stroke-dasharray="3 5"/>
+    <circle cx="382" cy="204" r="3.5" fill="#2563eb" stroke="none"/>
+
+    <!-- Optimization plan: savings waterfall -->
+    <rect x="436" y="152" width="130" height="98" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <path d="M444 238 H558" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="446" y="166" width="22" height="72" rx="3" fill="#2563eb" stroke="#2563eb"/>
+    <rect x="474" y="166" width="22" height="18" rx="3" fill="#dbe6fd" stroke="#2563eb"/>
+    <rect x="502" y="184" width="22" height="18" rx="3" fill="#dbe6fd" stroke="#2563eb"/>
+    <rect x="530" y="202" width="22" height="36" rx="3" fill="#2563eb" stroke="#2563eb"/>
+
+    <!-- Outcomes -->
+    <path d="M584 91 H608" stroke="#2563eb" marker-end="url(#arrow)"/>
+    <path d="M584 209 H608" stroke="#2563eb" marker-end="url(#arrow)"/>
+
+    <!-- Estimate: workload priced before it is deployed -->
+    <rect x="616" y="46" width="160" height="90" rx="8" fill="#ffffff"/>
+    <g stroke="none" fill="#2563eb">
+      <circle cx="644" cy="80" r="7"/>
+      <circle cx="644" cy="102" r="7" fill-opacity="0.4"/>
+      <circle cx="662" cy="91" r="7"/>
+    </g>
+    <path d="M700 70 H754 V112 H700 L680 91 Z" fill="#dbe6fd" stroke="#2563eb"/>
+    <circle cx="695" cy="91" r="3.5" fill="#ffffff" stroke="#2563eb"/>
+    <!-- Dollar sign on the tag -->
+    <path d="M719 85 C718 82 710 82 710 86.5 C710 91 720 89 720 93.5 C720 98 712 98 711 95 M715 80 V100" stroke="#2563eb" stroke-width="2.5"/>
+    <rect x="728" y="88" width="18" height="6" rx="3" fill="#93b4f5" stroke="none"/>
+
+    <!-- Reduction: wasted spend removed from the bill -->
+    <rect x="616" y="164" width="160" height="90" rx="8" fill="#ffffff"/>
+    <path d="M632 190 V222 A18 5 0 0 0 668 222 V190" fill="#e11d48" fill-opacity="0.08" stroke="#e11d48" stroke-dasharray="4 4"/>
+    <ellipse cx="650" cy="190" rx="18" ry="5" fill="#ffffff" stroke="#e11d48" stroke-dasharray="4 4"/>
+    <path d="M632 222 V240 A18 5 0 0 0 668 240 V222" fill="#2563eb" stroke="#2563eb"/>
+    <ellipse cx="650" cy="222" rx="18" ry="5" fill="#dbe6fd" stroke="#2563eb"/>
+    <path d="M632 231 A18 5 0 0 0 668 231" stroke="#ffffff" stroke-width="1.5"/>
+
+    <path d="M676 214 H696" stroke="#2563eb" marker-end="url(#arrow)"/>
+
+    <path d="M702 222 V240 A18 5 0 0 0 738 240 V222" fill="#2563eb" stroke="#2563eb"/>
+    <ellipse cx="720" cy="222" rx="18" ry="5" fill="#dbe6fd" stroke="#2563eb"/>
+    <path d="M702 231 A18 5 0 0 0 738 231" stroke="#ffffff" stroke-width="1.5"/>
+
+    <!-- Upright coin -->
+    <circle cx="756" cy="230" r="13" fill="#ffffff" stroke="#2563eb"/>
+    <circle cx="756" cy="230" r="9.5" stroke="#dbe6fd" stroke-width="1.5"/>
+    <path d="M759.5 225.5 C758.5 223 752.5 223 752.5 226.5 C752.5 230 759.5 229 759.5 233 C759.5 237 753 237 752.5 234.5 M756 221 V239" stroke="#2563eb" stroke-width="2"/>
+  </g>
+</svg>
